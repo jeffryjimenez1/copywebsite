@@ -18,16 +18,26 @@
 .banner {
     width: 100%;
     text-align: center;
-    background: #000;
-    height: 30vh;
+    background-image: linear-gradient(to right top, #365c3a, #01584e, #00515f, #0b4764, #363a5c);    height: 30vh;
     color: #FCFAFB;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Work Sans', sans-serif;
+    padding: 100px 0;
 }
 
 .banner h1{
-    font-size: 50px;
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 480px) {
+
+    .banner {
+        padding: 20px 0;
+    }
+    .banner h1{
+        font-size: 1.3rem;
+    }
 }
 </style>

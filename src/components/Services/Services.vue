@@ -16,7 +16,7 @@ const props = defineProps({
 <template>
     <section>
         <div :class="servicesSection">
-            <h1 class="services-title">{{servicesTitle}}</h1>
+            <h2 class="services-title">{{servicesTitle}}</h2>
             <ServicesItem 
             addIcon="fa-solid fa-circle-check"
             serviceItemText="crambled it to make a type specimen book. It has survived not only five centuries"
@@ -56,16 +56,16 @@ const props = defineProps({
 
 
 .services-section {
-    max-width: 1200px;
+    max-width: 1000px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto repeat(2, 1fr);
     align-content: center;
     justify-content: center;
-    font-family: 'Roboto regular', sans-serif;
+    font-family: 'Work regular', sans-serif;
     margin: auto;
     grid-gap: 15px;
-    padding: 200px 0;
+    padding: 100px 0;
     border-bottom:  5px solid #363A5C;
 }
 
@@ -73,8 +73,8 @@ const props = defineProps({
     font-family: 'Work Sans', cursive;
     text-transform: capitalize;
     text-align:  left;
-    font-size: 50px;
-    grid-column: 1/5;
+    font-size: 2rem;
+    grid-column: 1/3;
     grid-row: 1/2;
     margin-top: 0;
     margin-bottom: 40px;
@@ -83,6 +83,33 @@ const props = defineProps({
 
 .services-button {
     margin-top: 50px;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 50%;
 }
+
+@media screen and (max-width: 480px) {
+
+
+    .services-section {
+        grid-template-columns: 1fr;
+        font-size: 1rem;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .services-title {
+        grid-column: 1/2;
+        font-size: 1.2rem;
+        text-align: left;
+        padding: 0 15px;
+        margin: 20px 0 10px 0;
+    }
+
+    .services-button {
+        margin: 20px 0 20px 15px;
+    }
+}
+
 
 </style>

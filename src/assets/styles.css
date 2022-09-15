@@ -6,3 +6,10 @@
 #app {
         background: #FCFAFB;
 }
+
+@media screen and (max-width: 480px){
+        * {
+                margin: 0;
+                padding: 0;
+        }
+}

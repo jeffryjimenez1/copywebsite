@@ -38,8 +38,26 @@
 }
 
 .link-item:hover {
-    background: #5C3636;
+    background: #365A5C;
     color: #FCFAFB;
+}
+
+@media screen and (max-width: 480px) {
+
+
+    .link-item {
+        color: #fff;
+        border: 1px solid #fff;
+        margin-bottom: 30px;
+        padding: 10px;
+        border-radius: 10px;
+        margin-left: 30px;
+    }
+
+    .link-item:active {
+        color: yellow;
+        border: yellow solid 1px;
+    }
 }
 
 </style>

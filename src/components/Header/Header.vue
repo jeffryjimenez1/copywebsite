@@ -1,6 +1,7 @@
 <script setup>
     import Nav from './Navigation/Nav.vue'
-import Button from '../Button/Button.vue';
+    import Button from '../Button/Button.vue';
+    import { onMounted } from 'vue';
 
     const props = defineProps({
         mainTitle: {
@@ -11,19 +12,21 @@ import Button from '../Button/Button.vue';
         },
         cta: {
             type: String
-        }
+        },
     })
+
 
     const mainHeader = "main-header";
     const showcase = 'showcase';
     const showcaseText = 'showcase-text';
-    const ctaButton = 'main-button'
-
-
+    const ctaButton = 'main-button';
+    const hamburgerBtn = 'hamburger-menu';
+    
 </script>
 
-<template>  
+<template>      
     <header :class="mainHeader">
+
         <Nav></Nav>
         <div :class="showcase">
             <div :class="showcaseText">
@@ -32,6 +35,8 @@ import Button from '../Button/Button.vue';
                 <Button ctaButton="I need a copywriter"></Button>
             </div>  
         </div>
+        <img src="./images/services2.jpg" class="header-img">
+        <img src="./images/services1.jpg" class="second-img">
     </header>
 </template>
 
@@ -41,12 +46,16 @@ import Button from '../Button/Button.vue';
 
 
 .main-header {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     position: relative;
     color: #363A5C;
     border-bottom: 3px solid black;
+}
+
+.hamburger-menu {
+    display: none;
 }
 
 .showcase {
@@ -60,13 +69,14 @@ import Button from '../Button/Button.vue';
     transform: translate( 0, -50%);
     margin: auto;
     text-align: left;
+    z-index: 2;
 }
 
 .showcase-text h1 {
     margin-bottom: 40px;
     font-family: 'Work Sans', cursive;
     text-align: left;
-    font-size: 4rem;
+    font-size: 3rem;
     color: #5C3636;
 }
 
@@ -76,5 +86,65 @@ span {
     margin: 50px 0;
 }
 
+.header-img {
+    position: absolute;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    top: 60%;
+    transform: translateY(-50%);
+    right: 20%;
+    z-index: 1;
+    border-radius: 10px;
+}
 
+.second-img {
+    position: absolute;
+    object-fit: cover;
+    width: 250px;
+    height: 250px;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 480px) {
+
+
+    .main-header {
+        padding: 0 15px;
+        font-size: 1.1rem;
+        margin: 0 auto;
+        height: 100vh;
+    }
+
+    .main-header img {
+        display: none;
+    }
+
+    .showcase {
+        width: 80%;
+    }
+
+    span {
+       font-size: 1rem;
+       margin: 30px 0;
+    }
+
+
+
+    .showcase-text {
+        width: 80%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .showcase-text h1 {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+}
 </style>
