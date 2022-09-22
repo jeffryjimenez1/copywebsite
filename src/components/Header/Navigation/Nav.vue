@@ -19,10 +19,10 @@
 <template>
     <nav :class="mainNav">
         <ul :class="navList">
-            <NavItems logo="logo">Influential Words</NavItems>
-            <NavItems linkName="/home">Home</NavItems>
-            <NavItems linkName="/contact">Contact</NavItems>
-            <NavItems linkName="/services">Services</NavItems>
+            <li class="logo">Jeff | Copywriter</li>
+            <NavItems linkName="/index.html">Home</NavItems>
+            <NavItems linkName="#contact">Contact</NavItems>
+            <NavItems linkName="#services">Services</NavItems>
         </ul>
         <div @click="useNavBtn" :class="hamburgerBtn">
             <div class="line line1"></div>
@@ -39,6 +39,7 @@ html {
     margin: 0;
     padding: 0;
 }
+
 .main-nav-list {
     display: flex;
     justify-content: flex-end;
@@ -46,6 +47,14 @@ html {
     margin: 0;
     font-family: 'Work Sans', sans-serif;
 }
+
+.logo {
+    list-style: none;
+    align-self: center;
+    margin-right: auto;
+    padding: 20px 40px;
+}
+
 
 @media screen and (max-width: 480px) {
 

@@ -21,7 +21,7 @@
     
     <template>
     
-    <section class="footer">
+    <section class="footer" id="contact">
         
         <div class="footer-text">
             <h1>{{title}}</h1>

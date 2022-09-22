@@ -9,8 +9,8 @@ import Footer from './components/Footer/Footer.vue';
 
 <template>
     <Header 
-    mainTitle="Text Is Always Relevant"
-    subTitle="Professional copywriting speaks to your audience"
+    mainTitle="Professional writing"
+    subTitle="Connect with your audience and convert more"
     cta="Contact Us"
     ></Header>
 

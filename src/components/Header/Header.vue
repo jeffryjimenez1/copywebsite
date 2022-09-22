@@ -20,7 +20,7 @@
     const showcase = 'showcase';
     const showcaseText = 'showcase-text';
     const ctaButton = 'main-button';
-    const hamburgerBtn = 'hamburger-menu';
+   
     
 </script>
 
@@ -35,8 +35,8 @@
                 <Button ctaButton="I need a copywriter"></Button>
             </div>  
         </div>
-        <img src="./images/services2.jpg" class="header-img">
-        <img src="./images/services1.jpg" class="second-img">
+        <img src="@/assets/img/services1.jpg" class="header-img">
+        <img src="@/assets/img/services2.jpg" class="second-img">
     </header>
 </template>
 
@@ -54,9 +54,6 @@
     border-bottom: 3px solid black;
 }
 
-.hamburger-menu {
-    display: none;
-}
 
 .showcase {
     height: calc(100vh - 66px);

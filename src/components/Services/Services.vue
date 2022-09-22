@@ -15,24 +15,24 @@ const props = defineProps({
 
 <template>
     <section>
-        <div :class="servicesSection">
+        <div :class="servicesSection" id="services">
             <h2 class="services-title">{{servicesTitle}}</h2>
             <ServicesItem 
             addIcon="fa-solid fa-circle-check"
             serviceItemText="crambled it to make a type specimen book. It has survived not only five centuries"
-            benefitItem="Benefit"
+            benefitItem="Engage more with your audience"
             ></ServicesItem>
             
             <ServicesItem 
             addIcon="fa-solid fa-circle-check"
             serviceItemText="it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text"
-            benefitItem="Benefit"
+            benefitItem="Start more successful campaigns"
             ></ServicesItem>
 
             <ServicesItem 
             addIcon="fa-solid fa-circle-check"
             serviceItemText="There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour"
-            benefitItem="Benefit"
+            benefitItem="Live on your buyers mind"
             ></ServicesItem>
             <ServicesItem 
             addIcon="fa-solid fa-circle-check"

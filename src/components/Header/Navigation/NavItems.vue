@@ -25,10 +25,6 @@
     list-style: none;
 }
 
-.list-item:first-child {
-    margin-right: auto;
-}
-
 .link-item {
     display: inline-block;
     padding: 20px 40px;
@@ -41,6 +37,7 @@
     background: #365A5C;
     color: #FCFAFB;
 }
+
 
 @media screen and (max-width: 480px) {
 
