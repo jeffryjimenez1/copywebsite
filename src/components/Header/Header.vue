@@ -2,6 +2,7 @@
     import Nav from './Navigation/Nav.vue'
     import Button from '../Button/Button.vue';
     import { onMounted } from 'vue';
+    import Modal from '../composable/Modal.vue';
 
     const props = defineProps({
         mainTitle: {
@@ -28,7 +29,7 @@
     <header :class="mainHeader">
 
         <Nav></Nav>
-        <div :class="showcase">
+        <div :class="showcase" id="home">
             <div :class="showcaseText">
                 <h1>{{mainTitle}}</h1>
                 <span>{{subTitle}}</span>

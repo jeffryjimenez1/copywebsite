@@ -37,7 +37,7 @@ const props = defineProps({
             <ServicesItem 
             addIcon="fa-solid fa-circle-check"
             serviceItemText="it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text"
-            benefitItem="Benefit"
+            benefitItem="Maximize Revenue"
             ></ServicesItem>
 
             <Button ctaButton="I want more information" class="services-button"></Button>
@@ -64,7 +64,7 @@ const props = defineProps({
     justify-content: center;
     font-family: 'Work regular', sans-serif;
     margin: auto;
-    grid-gap: 15px;
+    grid-gap: 30px;
     padding: 100px 0;
     border-bottom:  5px solid #363A5C;
 }

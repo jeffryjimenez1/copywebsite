@@ -43,7 +43,6 @@ const props = defineProps({
     font-family: 'Work Sans', sans-serif;
     transition: all 0.2 ease;
     box-shadow: 1px 1px 8px 2px rgba(0,0,0,0.75);
-    margin: 20px auto;
 }
 
 
@@ -70,6 +69,7 @@ const props = defineProps({
         padding: 5px;
         width: 90%;
         box-shadow: none;
+        margin: 20px auto;
     }
 
     .service-item-text h2 {

@@ -3,6 +3,7 @@
     let navOptions = 'list-item';
     let navLinks = 'link-item';
 
+
     const props = defineProps({
         logo: {
             type: String
@@ -12,10 +13,14 @@
         }
     })
 
+    function removeNav(e) {
+        console.log(e.target.parentElement.parentElement.classList.toggle('hidden'))
+    }
+
 </script>
 
 <template>
-    <li :class="navOptions"><a :href="linkName" :class="navLinks"><slot></slot></a></li>
+    <li :class="navOptions"><a :href="linkName" @click="removeNav" :class="navLinks"><slot></slot></a></li>
 </template>
 
 <style scoped>

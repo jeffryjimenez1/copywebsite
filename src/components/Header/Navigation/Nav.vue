@@ -8,19 +8,18 @@
     let isActive = true;
     const hamburgerBtn = 'hamburger-menu'
 
-    function useNavBtn() {
+    function useNavBtn(e) {
        document.querySelector('.main-nav-list').classList.toggle('hidden');
-       document.querySelector('.hamburger-menu').classList.toggle('blackColor');
-       document.querySelector('.line').classList.toggle('blackColor');
     }
 
 </script>
 
 <template>
+    
     <nav :class="mainNav">
         <ul :class="navList">
             <li class="logo">Jeff | Copywriter</li>
-            <NavItems linkName="/index.html">Home</NavItems>
+            <NavItems linkName="#home" class="homeLink">Home</NavItems>
             <NavItems linkName="#contact">Contact</NavItems>
             <NavItems linkName="#services">Services</NavItems>
         </ul>
@@ -59,25 +58,19 @@ html {
 @media screen and (max-width: 480px) {
 
     .hidden {
-        display: none;
+        transform: translate(100%);
     }
-    .main-nav {
-        position: fixed;
-        z-index: 10;
-        width: 100%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-
     .main-nav-list {
+        position: fixed;
+        left: -100%;
+        z-index: 10;
         flex-direction: column;
-        justify-content: center; 
+        justify-content: center;
         width: 100%;
         height: 100vh;
         background-image: linear-gradient(to right top, #365c3a, #01584e, #00515f, #0b4764, #363a5c);
+        transition: translate 1 ease;
     }
-
     
     .hamburger-menu {
         display: block;
